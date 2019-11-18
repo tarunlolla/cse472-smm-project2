@@ -1,0 +1,3 @@
+train_data=/home/tarunlolla/SMM/Project2/Project2_Files/train.csv
+validation_data=/home/tarunlolla/SMM/Project2/Project2_Files/validataion.csv
+test_data=/home/tarunlolla/SMM/Project2/Project2_Files/test.csv
