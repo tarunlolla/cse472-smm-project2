@@ -42,15 +42,10 @@ def validateData(dataset_path,clsf):
             validate_df=validate_df.drop(validate_df[validate_df['label'] == lbl].index)
     predicted = clsf.predict(validate_df['title1_en']+validate_df['title2_en'])
     validate_df['predicted']=predicted
-    write_file=open('validate_result.csv','w')
-    write_file.write('id,label,prediction\n')
     print("Validation completed on data at : "+dataset_path)
     print('Accuracy achieved is ' + str(round(np.mean(predicted == validate_df['label'])*100,2)) + '%')
-    print("Validation results available at : validate_result.csv")
     print("Classification Report :")
     print(metrics.classification_report(validate_df['label'], predicted))
-    # print("Confusion Matrix :")
-    # print(metrics.confusion_matrix(validate_df['label'], predicted,labels=labels))
 
 
 def testData(dataset_path,clsf):
