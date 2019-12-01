@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB,GaussianNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
 
 def getDatasetPath():
